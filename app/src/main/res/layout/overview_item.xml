@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="1dp"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    app:cardCornerRadius="5dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp">
+
+        <!--on below line we are creating a
+            text view for displaying a text-->
+
+
+        <TextView
+            android:id="@+id/cat_name"
+            android:layout_width="189dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:padding="10dp"
+            android:textColor="@color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/total_cat"
+            android:layout_width="109dp"
+            android:layout_height="43dp"
+            android:layout_toRightOf="@id/cat_name"
+            android:gravity="center"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="18dp" />
+
+        <ProgressBar
+            android:id="@+id/percentProgress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="312dp"
+            android:layout_height="10dp"
+            android:layout_below="@id/cat_name"
+            android:layout_marginTop="-2dp"
+            android:indeterminate="false"
+            android:isScrollContainer="false"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:progressDrawable="@drawable/custom_progressbar" />
+
+        <TextView
+            android:id="@+id/percent"
+            android:layout_width="94dp"
+            android:layout_height="68dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/total_cat"
+            android:gravity="center_vertical"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TransactionFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:elevation="10dp"
+        android:paddingBottom="10dp">
+
+        <ImageButton
+            android:id="@+id/prev"
+            android:layout_width="59dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="24dp"
+            android:background="@color/pink"
+            android:contentDescription="A prev icon"
+            android:src="@drawable/chevron_left" />
+
+        <TextView
+            android:id="@+id/modeText"
+            android:layout_width="190dp"
+            android:layout_height="40dp"
+            android:layout_alignParentLeft="false"
+            android:layout_marginLeft="2dp"
+            android:layout_toRightOf="@id/prev"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="62dp"
+            android:layout_height="40dp"
+            android:layout_toRightOf="@id/modeText"
+            android:background="@color/pink"
+            android:contentDescription="A next icon"
+            android:src="@drawable/chevron_right" />
+
+        <ImageButton
+            android:id="@+id/showDisplayOption"
+            android:layout_width="89dp"
+            android:layout_height="39dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="2dp"
+            android:layout_toRightOf="@id/next"
+            android:backgroundTint="@color/pink"
+            android:contentDescription="A Filter List icon"
+            android:src="@drawable/filter_list" />
+
+        <TextView
+            android:id="@+id/incText"
+            android:layout_width="126dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/modeText"
+            android:gravity="center"
+            android:text="@string/income"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/expText"
+            android:layout_width="137dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/modeText"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="0dp"
+            android:layout_toRightOf="@id/incText"
+            android:gravity="center"
+            android:text="@string/expense"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/totalText"
+            android:layout_width="132dp"
+            android:layout_height="32dp"
+            android:layout_below="@id/modeText"
+            android:layout_marginLeft="0dp"
+            android:layout_toRightOf="@id/expText"
+            android:gravity="center"
+            android:text="@string/total"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/incValue"
+            android:layout_width="128dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/incText"
+            android:layout_marginTop="0dp"
+            android:gravity="center"
+            android:textColor="#00695C"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/expValue"
+            android:layout_width="136dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/expText"
+            android:layout_toRightOf="@id/incValue"
+            android:gravity="center"
+            android:textColor="#C62828"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/totalValue"
+            android:layout_width="133dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/totalText"
+            android:layout_toRightOf="@id/expValue"
+            android:gravity="center"
+            android:textSize="16sp" />
+    </RelativeLayout>
+
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/recordBody"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>
+

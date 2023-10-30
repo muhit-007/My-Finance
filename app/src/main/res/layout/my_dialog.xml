@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/displayOptionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="Display Option"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/viewmodeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="View By:"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:id="@+id/view_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:measureWithLargestChild="false">
+
+        <RadioButton
+            android:id="@+id/daily"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:checked="false"
+            android:minHeight="35dp"
+            android:text="Daily"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/weekly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:text="Weekly"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/monthly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:text="Monthly"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/three_months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:text="3 Months"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/six_months"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:text="6 Months"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/yearly"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:text="Yearly"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/orderbyText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:text="Order By:"
+        android:textSize="18sp"
+        android:textStyle="bold|italic" />
+
+    <RadioGroup
+        android:id="@+id/order_mode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
+        android:checkedButton="@id/new_old">
+
+        <RadioButton
+            android:id="@+id/new_old"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="false"
+            android:minHeight="35dp"
+            android:text="New to Old"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/old_new"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="35dp"
+            android:text="Old to New"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+
+</LinearLayout>
