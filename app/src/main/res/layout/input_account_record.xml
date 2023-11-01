@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="97dp"
+        android:layout_height="52dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="Label"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/set_label"
+        android:layout_width="226dp"
+        android:layout_height="51dp"
+        android:layout_below="@id/dateET"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/amountTV"
+        android:background="@drawable/edit_shape"
+        android:hint="Set Label"
+        android:paddingLeft="25dp" />
+
+    <TextView
+        android:id="@+id/amountTV"
+        android:layout_width="97dp"
+        android:layout_height="52dp"
+        android:layout_below="@id/labelText"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp"
+        android:gravity="center"
+        android:text="Amount"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/amountET"
+        android:layout_width="226dp"
+        android:layout_height="51dp"
+        android:layout_below="@id/labelText"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginRight="10dp"
+        android:layout_toRightOf="@+id/amountTV"
+        android:background="@drawable/edit_shape"
+        android:hint="amount"
+        android:inputType="number"
+        android:paddingLeft="25dp" />
+    </RelativeLayout>

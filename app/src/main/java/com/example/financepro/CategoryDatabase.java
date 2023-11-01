@@ -45,6 +45,11 @@ public class CategoryDatabase extends SQLiteOpenHelper {
 
             db.execSQL("CREATE TABLE HISTORY (_id INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, " +
                     "DATE TEXT, TIME TEXT, AMOUNT INTEGER);");
+
+
+            db.execSQL("CREATE TABLE ACCOUNT (_id INTEGER PRIMARY KEY AUTOINCREMENT, NAME TEXT, " +
+                        "DATE TEXT, AMOUNT INTEGER, TYPE INTEGER, STATUS BOOLEAN);");
+
         }
     }
     public void defaultInsert(SQLiteDatabase db, Category category){
@@ -102,6 +107,12 @@ public class CategoryDatabase extends SQLiteOpenHelper {
     public void deleteItem(String s){
         SQLiteDatabase db = this.getWritableDatabase();
         db.delete("CATEGORY", "NAME = ?", new String[]{s});
+        db.close();
+    }
+
+    public void deleteAcRecord(String s){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete("ACCOUNT", "NAME = ?", new String[]{s});
         db.close();
     }
     public void update(String s, String name){
@@ -192,5 +203,41 @@ public class CategoryDatabase extends SQLiteOpenHelper {
 
         }
         return amount;
+    }
+
+    public void insertAc(AccountRecord record){
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentTransaction = new ContentValues();
+        contentTransaction.put("NAME", record.getLabel());
+        contentTransaction.put("DATE", record.getDate());
+        contentTransaction.put("TYPE", record.getType());
+        contentTransaction.put("AMOUNT", record.getAmount());
+        contentTransaction.put("STATUS",record.isStatus());
+        db.insert("ACCOUNT", null, contentTransaction);
+    }
+    public ArrayList<AccountRecord> showAc(int type){
+        String sql = "select * from ACCOUNT WHERE TYPE = "+type;
+        ArrayList<AccountRecord> records = new ArrayList<>();
+        try {
+            SQLiteDatabase db = this.getReadableDatabase();
+            Cursor cursor = db.rawQuery(sql, null);
+            if(cursor.moveToFirst()){
+                do{
+                    AccountRecord accountRecord = new AccountRecord();
+                    accountRecord.setLabel(cursor.getString(1));
+                    accountRecord.setDate(cursor.getString(2));
+                    accountRecord.setAmount(cursor.getInt(3));
+                    AccountRecord.TOTAL += accountRecord.getAmount();
+                    accountRecord.setType(cursor.getInt(4));
+                    records.add(accountRecord);
+                }while (cursor.moveToNext());
+            }
+            cursor.close();
+            db.close();
+        }catch (SQLiteException e){
+
+        }
+
+        return records;
     }
 }

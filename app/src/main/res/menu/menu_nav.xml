@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:id="@+id/income"
-        android:title="@string/income"
-        android:icon="@drawable/income"/>
-    <item android:id="@+id/expense"
-        android:title="@string/expense"
-        android:icon="@drawable/expense"/>
-    <item android:id="@+id/liability"
-        android:title="@string/liability"
-        android:icon="@drawable/liability"/>
-    <item android:id="@+id/asset"
-        android:title="@string/asset"
-        android:icon="@drawable/assets"/>
-    <item android:id="@+id/savings"
-        android:title="@string/savings"
-        android:icon="@drawable/savings"/>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    tools:ignore="ExtraText">
 
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/accounting"
+            android:title="@string/accounting"
+            android:icon="@drawable/folder_special"/>
+        <item android:id="@+id/settings"
+            android:title="@string/settings"
+            android:icon="@drawable/settings"/>
+
+    </group>
+
+    <item android:title="Data Management">
+        <menu>
+            <item android:id="@+id/importdata"
+                android:title="@string/importdata"
+                android:icon="@drawable/add_notes"/>
+            <item android:id="@+id/exportdata"
+                android:title="@string/exportdata"
+                android:icon="@drawable/export_notes"/>
+            <item android:id="@+id/deletedata"
+                android:title="@string/deletedata"
+                android:icon="@drawable/delete"/>
+        </menu>
+    </item>
+
+    <item android:title="Communicate">
+        <menu>
+            <item android:id="@+id/like"
+                android:title="@string/like"
+                android:icon="@drawable/thumb_up"/>
+            <item android:id="@+id/feedback"
+                android:title="@string/feedback"
+                android:icon="@drawable/reviews"/>
+            <item android:id="@+id/share"
+                android:title="@string/share"
+                android:icon="@drawable/share"/>
+        </menu>
+    </item>
 
 
 </menu>

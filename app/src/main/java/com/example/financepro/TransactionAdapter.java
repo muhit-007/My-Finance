@@ -1,23 +1,15 @@
 package com.example.financepro;
 
-import android.app.Activity;
 import android.graphics.Color;
 import android.view.ViewGroup;
 import android.view.LayoutInflater;
 import android.widget.TextView;
-import androidx.cardview.widget.CardView;
+
 import androidx.recyclerview.widget.RecyclerView;
-import androidx.core.content.ContextCompat;
+
 import android.view.View;
 import java.util.ArrayList;
-import android.view.MenuItem;
-import android.widget.PopupMenu;
-import android.content.Context;
-import android.content.DialogInterface;
-import androidx.appcompat.app.AlertDialog;
-import android.widget.Toast;
-import android.text.TextUtils;
-import androidx.cardview.widget.CardView;
+
 public class TransactionAdapter extends RecyclerView.Adapter<TransactionAdapter.ViewHolder>{
 
     private ArrayList<HistoryRecord> records;

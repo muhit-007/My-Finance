@@ -41,4 +41,12 @@
         <item>Expense Overview</item>
         <item>Income Overview</item>
     </string-array>
+    <string name="like">Like Us</string>
+    <string name="settings">Settings</string>
+    <string name="feedback">Give FeedBack</string>
+    <string name="accounting">Accounting</string>
+    <string name="share">Share</string>
+    <string name="importdata">Import File/Data</string>
+    <string name="exportdata">Export File/Data</string>
+    <string name="deletedata">Delete Data</string>
 </resources>

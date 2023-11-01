@@ -3,12 +3,10 @@ package com.example.financepro;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import android.app.FragmentManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.content.SharedPreferences;
 import android.widget.LinearLayout;
 
 import java.util.ArrayList;
@@ -19,7 +17,7 @@ import android.widget.ImageButton;
 public class TransactionFragment extends Fragment implements MyDialog.DisplayOptionListener{
     public static ArrayList<HistoryRecord> records = new ArrayList<>();
     private CategoryDatabase categoryDatabase;
-    public static TransactionAdapter adapter;
+    public static AccountAdapter adapter;
     private LinearLayout body;
     private DisplayOption displayOption;
 
